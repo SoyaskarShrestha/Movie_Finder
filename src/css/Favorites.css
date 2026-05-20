@@ -34,12 +34,19 @@
 }
 
 .movies-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
   padding: 1rem;
   width: 100%;
   box-sizing: border-box;
+  align-items: flex-start;
+}
+
+.movies-grid .movie-card {
+  flex: 0 0 300px;
+  width: 300px;
+  margin: 0;
 }
 
 /* Animation for new favorites being added */
@@ -48,12 +55,13 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.movies-grid > * {
+.movies-grid>* {
   animation: fadeIn 0.3s ease-out forwards;
 }
