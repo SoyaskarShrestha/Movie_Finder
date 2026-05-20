@@ -34,13 +34,12 @@
 }
 
 .movies-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
   padding: 1rem;
   width: 100%;
   box-sizing: border-box;
-  align-items: flex-start;
 }
 
 .movies-grid .movie-card {
